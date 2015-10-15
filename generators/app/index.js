@@ -4,6 +4,9 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
+  init: function () {
+    this.pkg = require('../../package.json');
+
   prompting: function () {
     var done = this.async();
 
@@ -15,8 +18,8 @@ module.exports = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'input',
       name: 'humanName',
-      message: 'Would you like to call your theme?',
-      default: 'My Backdrop Theme'
+      message: 'What shall I name your theme?',
+      default: 'An awesome theme powered by Backdrop and Yeoman!'
     }];
 
     this.prompt(prompts, function (props) {
