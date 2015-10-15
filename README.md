@@ -1,6 +1,6 @@
 # generator-backdroptheme [![Build Status](https://secure.travis-ci.org/clickbox/generator-backdroptheme.png?branch=master)](https://travis-ci.org/clickbox/generator-backdroptheme)
 
-> [Yeoman](http://yeoman.io) generator
+> [Yeoman](http://yeoman.io) generator for creating Backdrop CMS themes.
 
 
 ## Getting Started
