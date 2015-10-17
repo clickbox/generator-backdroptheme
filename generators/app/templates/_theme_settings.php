@@ -1,9 +1,9 @@
 <?php
 /**
  * @file
- * Theme settings file for <%= appname %>.
+ * Theme settings file for "<%= appname %>".
  *
- * Although <%= appname %> itself does not provide any settings, we use this file to
+ * Although "<%= appname %>" itself does not provide any settings, we use this file to
  * inform the user that the module supports color schemes if the Color module
  * is enabled.
  */

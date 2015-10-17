@@ -2,7 +2,7 @@
 
 /**
  * @file
- * <%= appname %>'s theme implementation for comments.
+ * "<%= appname %>"'s theme implementation for comments.
  *
  * Available variables:
  * - $author: Comment author. Can be link or plain text.
