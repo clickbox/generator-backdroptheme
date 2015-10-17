@@ -1,0 +1,21 @@
+name = Wormhole
+description =  A shortcut made possible by a singularity.
+version = BACKDROP_VERSION
+backdrop = 1.x
+
+
+; ========================================
+; Stylesheets
+; ========================================
+
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+
+; We need at least one setting for the theme settings page to appear in the
+; menu. Color module provides our defaults, so we just register a dummy setting.
+settings[color] = true
+
+; ========================================
+; Scripts
+; ========================================
+

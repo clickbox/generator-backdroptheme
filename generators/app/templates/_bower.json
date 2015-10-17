@@ -1,6 +1,7 @@
 {
-  "name": "package",
+  "name": "<%= appname %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "singularity": "~1.6.2"
+  }
 }
-
