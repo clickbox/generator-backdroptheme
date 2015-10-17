@@ -3,7 +3,7 @@ require 'singularitygs'
 require 'toolkit'
 
 # Set this to the root of your project when deployed:
-http_path = "/themes/wormhole"
+http_path = "/themes/<%= appname %>"
 css_dir = "css"
 sass_dir = "sass"
 images_dir = "images"

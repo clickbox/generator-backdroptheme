@@ -7,7 +7,7 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
- * @see wormhole_process_maintenance_page()
+ * @see <%= appname %>_process_maintenance_page()
  */
 ?>
 <!DOCTYPE html>

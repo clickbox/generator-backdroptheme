@@ -16,9 +16,9 @@ module.exports = yeoman.generators.Base.extend({
       message: 'What is the machine name of your subtheme?',
       default: this.appname,
       validate: appNameValidation,
-      filter: function (input) {
-        return input.toLowerCase().replace(/[^a-z0-9]+/, '_').substr(0, 32);
-      }
+      // filter: function (input) {
+      //   return input.toLowerCase().replace(/[^a-z0-9]+/, '_').substr(0, 32);
+      // }
     }, {
       type: 'input',
       name: 'description',
@@ -52,19 +52,6 @@ module.exports = yeoman.generators.Base.extend({
     this.userEmail = props.userEmail;
     callback();
   },
-  _createProjectFileSystem: function () {
-    var destRoot = this.destinationRoot(),
-        sourceRoot = this.sourceRoot(),
-        appDir = destRoot + '/app',
-        templateContext = {
-          appname = this.appname,
-          humanName = this.humanName,
-          description = this.description,
-          userName = this.userName,
-          userEmail = this.userEmail,
-          repo = this.repo,
-        };
-  },
    initializing: function () {
     this.pkg = require('../../package.json');
 
@@ -95,15 +82,28 @@ module.exports = yeoman.generators.Base.extend({
         }; { 
       this.fs.copyTpl (
         this.templatePath('_package.json'),
-        this.destinationPath('package.json' templateContext);
+        this.destinationPath('package.json', templateContext);
       );
       this.fs.copyTpl(
         this.templatePath('_bower.json'),
-        this.destinationPath('bower.json' templateContext);
+        this.destinationPath('bower.json', templateContext);
       );
-    },
-
-    projectfiles: function () {
+      this.fs.copyTpl (
+        this.templatePath('_README.md'),
+        this.destinationPath('README.md', templateContext);
+      );
+      this.fs.copyTpl(
+        this.templatePath('_template.php'),
+        this.destinationPath('template.php', templateContext);
+      );
+      this.fs.copyTpl (
+        this.templatePath('_theme_settings.php'),
+        this.destinationPath('theme_settings', templateContext);
+      );
+      this.fs.copyTpl(
+        this.templatePath('_wormhole.info'),
+        this.destinationPath(this.appname + '.info', templateContext);
+      );
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
@@ -112,6 +112,19 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('jshintrc'),
         this.destinationPath('.jshintrc')
       );
+      this.fs.copy(
+        this.templatePath('config.rb'),
+        this.destinationPath('config.rb')
+      );
+      this.fs.copy(
+        this.templatePath('Gemfile'),
+        this.destinationPath('Gemfile')
+      );
+      this.directory('css', 'css');
+      this.directory('sass', 'sass');
+      this.directory('js', 'js');
+      this.directory('images', 'images');
+      this.directory('templates', 'templates');
     }
   },
 

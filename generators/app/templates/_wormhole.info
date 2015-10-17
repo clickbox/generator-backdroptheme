@@ -1,5 +1,5 @@
-name = Wormhole
-description =  A shortcut made possible by a singularity.
+name = <%= appname %>
+description =  <%= description %>
 version = BACKDROP_VERSION
 backdrop = 1.x
 
