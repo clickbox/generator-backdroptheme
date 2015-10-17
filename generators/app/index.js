@@ -82,13 +82,24 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
+      var destRoot = this.destinationRoot(),
+        sourceRoot = this.sourceRoot(),
+        appDir = destRoot + '/app',
+        templateContext = {
+          appname = this.appname,
+          humanName = this.humanName,
+          description = this.description,
+          userName = this.userName,
+          userEmail = this.userEmail,
+          repo = this.repo,
+        }; { 
       this.fs.copyTpl (
-        this.templatePath('_package.json', templateContext),
-        this.destinationPath('package.json')
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json' templateContext);
       );
       this.fs.copyTpl(
-        this.templatePath('_bower.json', templateContext),
-        this.destinationPath('bower.json')
+        this.templatePath('_bower.json'),
+        this.destinationPath('bower.json' templateContext);
       );
     },
 
