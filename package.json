@@ -4,11 +4,11 @@
   "description": "A Yeoman generator to create Backdrop CMS themes.",
   "license": "MIT",
   "main": "generators/app/index.js",
-  "repository": "clickbox/generator-backdroptheme",
+  "repository": "https://github.com/clickbox/generator-backdroptheme",
   "author": {
     "name": "Ezenwa Isiogu",
     "email": "yo@ezenwa.com",
-    "url": "https://github.com/clickbox"
+    "url": "http://ezenwa.io"
   },
   "engines": {
     "node": ">=0.10.0"
