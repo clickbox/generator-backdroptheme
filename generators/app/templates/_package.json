@@ -2,6 +2,8 @@
   "name": "<%= appname %>",
   "version": "0.0.0",
   "description": "<%= description %>",
+  "author": "<%= userName %>",
+  "email": "<%= userEmail %>",
+  "url": "<%= repo %>",
   "dependencies": {}
 }
-"author": "<%= userName %>"

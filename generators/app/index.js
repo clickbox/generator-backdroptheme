@@ -9,7 +9,7 @@ module.exports = yeoman.generators.Base.extend({
       type: 'input',
       name: 'humanName',
       message: 'What should I call your subtheme?',
-      default: 'An awesome theme powered by Backdrop and Yeoman!'
+      default: 'My Wormhole Subtheme'
      }, {
       type: 'input',
       name: 'name',
@@ -56,7 +56,7 @@ module.exports = yeoman.generators.Base.extend({
 
      // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the amazing ' + chalk.green('Backdroptheme') + ' generator!'
+      'Welcome to the amazing ' + chalk.green('Backdrop Theme') + ' generator!'
     ));
   },
    prompting: function () {
@@ -133,5 +133,10 @@ module.exports = yeoman.generators.Base.extend({
 
   install: function () {
     this.installDependencies();
+  },
+  end: function () {
+    this.log(yosay(
+      'Enjoy your new ' + chalk.green('Backdrop Theme') + ' Good Bye!'
+    ));
   }
 });
