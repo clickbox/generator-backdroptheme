@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains functions to alter Backdrops's markup for the "<%= appname %>" theme.
+ * Contains functions to alter Backdrops's markup for the <%= appname %> theme.
  *      ████████
 *     ███░░▓▓▓▓███
 *     █░░░░▓▓▓▓░░█
@@ -19,8 +19,8 @@
 *      █░░░░░░░░█
 *       ████████
  *
- * The "<%= appname %>" theme is a base theme designed to be easily extended by sub
- * themes. You should not modify this or any other file in the "<%= appname %>" theme
+ * The <%= appname %> theme is a base theme designed to be easily extended by sub
+ * themes. You should not modify this or any other file in the <%= appname %> theme
  * folder. Instead, you should create a sub-theme and make your changes there.
  * In fact, if you're reading this, you may already off on the wrong foot.
  *
@@ -36,14 +36,14 @@
 /**
  * Implements hook_preprocess_maintenance_page().
  */
-function "<%= appname %>"_preprocess_maintenance_page(&$variables) {
-  backdrop_add_css(backdrop_get_path('theme', '"<%= appname %>"') . '/css/maintenance-page.css');
+function <%= appname %>_preprocess_maintenance_page(&$variables) {
+  backdrop_add_css(backdrop_get_path('theme', '<%= appname %>') . '/css/maintenance-page.css');
 }
 
 /**
  * Implements hook_preprocess_layout().
  */
-function "<%= appname %>"_preprocess_layout(&$variables) {
+function <%= appname %>_preprocess_layout(&$variables) {
   if ($variables['content']['header']) {
     $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
   }
@@ -52,14 +52,14 @@ function "<%= appname %>"_preprocess_layout(&$variables) {
 /**
  * Implements theme_menu_tree().
  */
-function "<%= appname %>"_menu_tree($variables) {
+function <%= appname %>_menu_tree($variables) {
   return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
 }
 
 /**
  * Implements theme_field__field_type().
  */
-function "<%= appname %>"_field__taxonomy_term_reference($variables) {
+function <%= appname %>_field__taxonomy_term_reference($variables) {
   $output = '';
 
   // Render the label, if it's not hidden.

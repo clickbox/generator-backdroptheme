@@ -1,6 +1,6 @@
-# "<%= appname %>"
+# <%= appname %>
 
-"<%= appname %>" is a [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) powered minimalist base theme. It is optimized for both responsive and mobile first web design. Built to encourage best modern front end practices. 
+<%= appname %> is a [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) powered minimalist base theme. It is optimized for both responsive and mobile first web design. Built to encourage best modern front end practices. 
 
 # INSTALLATION
 - Install this theme using the official Backdrop CMS instructions at
@@ -14,7 +14,7 @@ Installing Bundler is easy, type the following into your command line:
 
 `gem install bundler`
 
-Once you've installed Bundler, in your theme's directory, where your `config.rb` file is, create a file called `Gemfile`. The Gemfile that comes with new "<%= appname %>" 1.x subthemes looks like this:
+Once you've installed Bundler, in your theme's directory, where your `config.rb` file is, create a file called `Gemfile`. The Gemfile that comes with new <%= appname %> 1.x subthemes looks like this:
 
 ```
 # Pull gems from RubyGems

@@ -84,9 +84,22 @@ module.exports = yeoman.generators.Base.extend({
       this.directory('js', 'js');
       this.directory('images', 'images');
       this.directory('templates', 'templates');
-      this.fs.copyTpl('templates/_comment.tpl.php', 'templates/comment.tpl.php', templateContext);
-      this.fs.copyTpl('templates/_maintenance-page.tpl.php', 'templates/maintenance-page.tpl.php', templateContext);
-      this.fs.copyTpl('templates/_node.tpl.php', 'templates/node.tpl.php', templateContext);  
+      this.fs.copyTpl(
+        this.templatePath('_config.rb'),
+        this.destinationPath('config.rb')
+      );
+      this.fs.copyTpl (
+        this.templatePath('_comment.tpl.php'),
+        this.destinationPath('templates/comment.tpl.php'), templateContext
+      );  
+      this.fs.copyTpl (
+        this.templatePath('_maintenance-page.tpl.php'),
+        this.destinationPath('templates/maintenance-page.tpl.php'), templateContext
+      );
+      this.fs.copyTpl (
+        this.templatePath('_node.tpl.php'),
+        this.destinationPath('templates/node.tpl.php'), templateContext
+      );
       this.fs.copyTpl (
         this.templatePath('_package.json'),
         this.destinationPath('package.json'), templateContext
@@ -120,14 +133,13 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('.jshintrc')
       );
       this.fs.copy(
-        this.templatePath('config.rb'),
-        this.destinationPath('config.rb')
-      );
-      this.fs.copy(
         this.templatePath('Gemfile'),
         this.destinationPath('Gemfile')
       );
-      
+      this.fs.copy(
+        this.templatePath('screenshot.png'),
+        this.destinationPath('screenshot.png')
+      );
     }
   },
 
